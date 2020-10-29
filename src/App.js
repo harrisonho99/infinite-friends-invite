@@ -28,7 +28,7 @@ export default function Comment() {
     }
   }
   return (
-    <div style={{ position: "absolute", top: 30, right: 10 }}>
+    <div style={{ position: "absolute", top: 50, right: 10 }}>
       <div
         style={{
           borderLeft: "10px solid transparent ",
@@ -45,10 +45,11 @@ export default function Comment() {
           border: "2px solid #2185d0",
           width: "fit-content",
           padding: "10px",
-          borderRadius: 5,
+          borderRadius: 10,
           margin: 0,
           height: 500,
           overflowY: "auto",
+          overflowX:'hidden'
         }}
         onScroll={handleScroll}
       >

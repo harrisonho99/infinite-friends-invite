@@ -13,9 +13,11 @@ const ApproveCard = (props) => {
           <button
             style={{
               width: "40%",
-              border: "green 2px solid",
-              background: "white",
-              borderRadius: 5,
+              color:"white",
+              background: "rgb(5,112,230)",
+              borderRadius: 10,
+              border:'none',
+              height:30
             }}
           >
             Accept
@@ -23,9 +25,11 @@ const ApproveCard = (props) => {
           <button
             style={{
               width: "40%",
-              border: "red 2px solid",
-              background: "white",
-              borderRadius: 5,
+              border: "none",
+              background: "rgba(200,24,53,.7)",
+              borderRadius: 10,
+              height:30,
+              color:"white",
             }}
           >
             Reject
