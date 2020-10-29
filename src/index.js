@@ -1,17 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import Comment from "./App";
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      display: false,
+    };
+  }
+  handleClick() {
+    this.setState((currenState) => ({ display: !currenState.display }));
+  }
+  render() {
+    let CommentElement = this.state.display ? <Comment /> : null;
+    return (
+      <div
+        className="container"
+        style={{ position: "relative", float: "right" }}
+      >
+        <button className="ui primary button" onClick={this.handleClick}>
+          Friend Invite
+        </button>
+        {CommentElement}
+      </div>
+    );
+  }
+}
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
